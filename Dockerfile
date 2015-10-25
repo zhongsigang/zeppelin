@@ -26,4 +26,4 @@ EXPOSE 8080 8081
 
 RUN ln -s /incubator-zeppelin/bin/zeppelin-daemon.sh /usr/bin/zeppelin
 
-CMD ["zeppelin","start"] 
+CMD ["zeppelin","start"]
