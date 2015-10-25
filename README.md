@@ -20,13 +20,21 @@ docker run -it sequenceiq/hadoop-docker:2.7.0 /etc/bootstrap.sh -bash
 Mapred:19888 Other:49707 2122
  
 https://hub.docker.com/r/sequenceiq/spark/  from sequenceiq/hadoop-docker:2.6.0
+
 ENTRYPOINT ["/etc/bootstrap.sh"]
+
 docker run -it -p 8088:8088 -p 8042:8042 -h sandbox sequenceiq/spark:1.5.1 bash
+
 spark-shell \
+
 --master yarn-client \
+
 --driver-memory 1g \
+
 --executor-memory 1g \
+
 --executor-cores 1
+
 spark-submit \
 --class org.apache.spark.examples.SparkPi \
 --files $SPARK_HOME/conf/metrics.properties \
