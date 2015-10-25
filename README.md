@@ -36,26 +36,43 @@ spark-shell \
 --executor-cores 1
 
 spark-submit \
+
 --class org.apache.spark.examples.SparkPi \
+
 --files $SPARK_HOME/conf/metrics.properties \
+
 --master yarn-cluster \
+
 --driver-memory 1g \
+
 --executor-memory 1g \
+
 --executor-cores 1 \
+
 $SPARK_HOME/lib/spark-examples-1.5.1-hadoop2.6.0.jar
+
 spark-submit \
+
 --class org.apache.spark.examples.SparkPi \
+
 --master yarn-client \
+
 --driver-memory 1g \
+
 --executor-memory 1g \
+
 --executor-cores 1 \
+
 $SPARK_HOME/lib/spark-examples-1.5.1-hadoop2.6.0.jar
 
 http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/ClusterSetup.html
+
 http://spark.apache.org/docs/latest/running-on-yarn.html
+
 http://spark.apache.org/docs/latest/spark-standalone.html
 
 https://hub.docker.com/r/epahomov/docker-zeppelin/
+
 docker run -i -t -p 8080:8080 -p 8081:8081 epahomov/docker-zeppelin /bin/bash
 
 https://github.com/apache/incubator-zeppelin
